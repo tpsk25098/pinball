@@ -9,32 +9,26 @@ function setup() {
 function draw() 
 {
    background(30);
+  
+    if (keyIsDown(RIGHT_ARROW)) {
+      box.position.x = box.position.x + 7;
+    }
 
-  if (keyIsDown(RIGHT_ARROW)) 
-  {
-    box.position.x = box.position.x +5;
+    if (keyIsDown(LEFT_ARROW)) {
+      box.position.x = box.position.x - 7;
+
+    }
+
+    if (keyIsDown(UP_ARROW)) {
+      box.position.y = box.position.y - 7;
+
+    }
+
+    if (keyIsDown(DOWN_ARROW)) {
+      box.position.y = box.position.y + 0;
+      background('red');
+    }
+    drawSprites();
   }
-
-    if (keyIsDown(LEFT_ARROW)) 
-  {
-    box.position.x= box.position.x -5;
-    
-  }
- 
-    if (keyIsDown(UP_ARROW)) 
-  {
-    box.position.y = box.position.y - 5;
-   
-  }
-
-  if (keyIsDown(DOWN_ARROW)) 
-  {
-    box.position.y = box.position.y + 5;
-  }
-
-  drawSprites();
-}
-
-
 
 
